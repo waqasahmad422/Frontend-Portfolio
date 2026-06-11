@@ -124,7 +124,7 @@ const countObs = new IntersectionObserver(
           const step = Math.ceil(target / 40);
           const timer = setInterval(() => {
             current = Math.min(current + step, target);
-            num.textContent = current + (target >= 10 ? "+" : "");
+            num.textContent = current + (target >= 5 ? "+" : "");
             if (current >= target) clearInterval(timer);
           }, 40);
         });
