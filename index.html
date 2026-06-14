@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
@@ -9,9 +9,9 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js"></script>
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <link rel="stylesheet" href="./assets/css/style.css">
-
-
 </head>
 
 <body>
@@ -22,17 +22,25 @@
 
   <!-- ── NAV ── -->
   <nav id="navbar">
-    <a href="#home" class="logo"><span><img src="./assets/images/logo.png" alt=""></span></a>
+    <a href="#home" class="logo"><span><img src="./assets/images/logo.png" alt="WAS Logo"></span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#home" onclick="closeNav()">Home</a></li>
       <li><a href="#about" onclick="closeNav()">About</a></li>
       <li><a href="#skills" onclick="closeNav()">Skills</a></li>
       <li><a href="#projects" onclick="closeNav()">Projects</a></li>
+      <li><a href="#testimonials" onclick="closeNav()">Reviews</a></li>
       <li><a href="#contact" onclick="closeNav()">Contact</a></li>
       <li><a href="#contact" onclick="closeNav()" class="nav-cta">Hire Me</a></li>
     </ul>
-    <div class="hamburger" id="hamburger" onclick="toggleNav()">
-      <span></span><span></span><span></span>
+
+    <div class="nav-actions">
+      <!-- Dark / Light Mode Toggle -->
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark mode">
+        <i class="fas fa-sun" id="themeIcon"></i>
+      </button>
+      <div class="hamburger" id="hamburger" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </div>
     </div>
   </nav>
 
@@ -42,13 +50,12 @@
     <div class="particles" id="particles"></div>
 
     <div class="hero-content">
-      <!-- <div class="hero-eyebrow">Welcome to my portfolio</div> -->
       <h1 class="hero-name">Hi, I'm <span>Waqas Ahmad Shah</span></h1>
       <div class="hero-typed-wrap">
         I'm a <span id="typed-text"></span>
       </div>
       <p class="hero-desc">
-       Hi, I’m Waqas Ahmad Shah — a passionate Frontend Developer who loves building modern, responsive, and user-friendly web applications. I turn creative ideas into real digital experiences using clean and efficient code.
+        A passionate Frontend Developer who loves building modern, responsive, and user-friendly web applications. I turn creative ideas into real digital experiences using clean and efficient code.
       </p>
       <div class="hero-btns">
         <a href="#projects" class="btn-primary">View My Work</a>
@@ -58,7 +65,7 @@
 
     <div class="hero-image">
       <div class="hero-image-placeholder">
-        <img src="./assets/images/profile_img/waqas.jpg" alt="waqas ahmad shah">
+        <img src="./assets/images/profile_img/waqas.jpg" alt="Waqas Ahmad Shah">
       </div>
     </div>
 
@@ -103,7 +110,7 @@
             <div class="highlight-icon"><i class="fas fa-rocket"></i></div>
             <div class="highlight-info">
               <h4>Career Goal</h4>
-              <p>My career goal is to establish a successful web-based company by 2027, focused on delivering innovative, user-centered digital solutions that help businesses grow through modern web technologies.</p>
+              <p>To establish a successful web-based company by 2027, focused on delivering innovative, user-centered digital solutions through modern web technologies.</p>
             </div>
           </div>
         </div>
@@ -149,58 +156,39 @@
         <h3>Frontend Development</h3>
         <div class="skill-item">
           <div class="skill-info"><span class="skill-name">HTML5 / CSS3</span><span class="skill-pct">95%</span></div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-width="95"></div>
-          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-info"><span class="skill-name">JavaScript (ES6+)</span><span class="skill-pct">80%</span>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-width="80"></div>
-          </div>
+          <div class="skill-info"><span class="skill-name">JavaScript (ES6+)</span><span class="skill-pct">80%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
         </div>
         <div class="skill-item">
           <div class="skill-info"><span class="skill-name">React.js</span><span class="skill-pct">70%</span></div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-width="70"></div>
-          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
         </div>
         <div class="skill-item">
           <div class="skill-info"><span class="skill-name">Tailwind CSS</span><span class="skill-pct">65%</span></div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-width="65"></div>
-          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
         </div>
       </div>
 
       <div class="skill-category reveal">
         <h3>Backend & Tools</h3>
         <div class="skill-item">
-          <div class="skill-info"><span class="skill-name">Node.js / Express</span><span class="skill-pct">70%</span>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-width="70"></div>
-          </div>
+          <div class="skill-info"><span class="skill-name">Node.js / Express</span><span class="skill-pct">70%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
         </div>
         <div class="skill-item">
           <div class="skill-info"><span class="skill-name">PHP</span><span class="skill-pct">75%</span></div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-width="75"></div>
-          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
         </div>
         <div class="skill-item">
           <div class="skill-info"><span class="skill-name">Git / GitHub</span><span class="skill-pct">85%</span></div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-width="85"></div>
-          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-info"><span class="skill-name">Figma / UI Design</span><span class="skill-pct">78%</span>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-width="78"></div>
-          </div>
+          <div class="skill-info"><span class="skill-name">Figma / UI Design</span><span class="skill-pct">78%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
         </div>
       </div>
     </div>
@@ -228,75 +216,178 @@
 
     <div class="projects-grid">
 
-<div class="project-card reveal">
+      <!-- Card 1 -->
+      <div class="project-card reveal" data-aos="fade-up" data-aos-delay="0">
         <div class="project-thumb">
           <div class="project-thumb-placeholder" style="background:linear-gradient(135deg,#0a1a0a,#0a2d10);">
-            <img src="./assets/images/project_img/portfolio.PNG" alt="">
+            <img src="./assets/images/project_img/portfolio.PNG" alt="Personal Portfolio">
           </div>
           <div class="project-overlay"></div>
         </div>
         <div class="project-body">
-          <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span
-              class="tag">JavaScript</span><span
-              class="tag">Typed.js</span></div>
+          <div class="project-tags">
+            <span class="tag">HTML</span><span class="tag">CSS</span>
+            <span class="tag">JavaScript</span><span class="tag">Typed.js</span>
+          </div>
           <h3 class="project-title">Personal Portfolio</h3>
-          <p class="project-desc">This is a modern personal portfolio website showcasing my skills, projects, and experience as a frontend developer. It highlights my work in building responsive, user-friendly web applications using HTML, CSS, JavaScript, and React.</p>
+          <p class="project-desc">A modern personal portfolio website showcasing my skills, projects, and experience as a frontend developer. Built with clean animations and a responsive layout.</p>
           <div class="project-links">
             <a href="https://github.com/waqasahmad422/Frontend-Portfolio" target="_blank" class="project-link"><i class="fab fa-github"></i> Source <i class="fas fa-arrow-right"></i></a>
-            <a href="https://waqas-lemon.vercel.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Demo <i
-                class="fas fa-arrow-right"></i></a>
+            <a href="https://waqas-lemon.vercel.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Demo <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
 
-      <div class="project-card reveal">
+      <!-- Card 2 -->
+      <div class="project-card reveal" data-aos="fade-up" data-aos-delay="100">
         <div class="project-thumb">
           <div class="project-thumb-placeholder" style="background:linear-gradient(135deg,#0a0f1a,#0a1a2d);">
-            <img src="./assets/images/project_img/bezcill.PNG" alt="">
+            <img src="./assets/images/project_img/bezcill.PNG" alt="Bizcell Landing Page">
           </div>
           <div class="project-overlay"></div>
         </div>
         <div class="project-body">
-          <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span
-              class="tag">JavaScript</span></div>
-          <h3 class="project-title">Bizcell –Landing Page</h3>
-          <p class="project-desc">Bizcell is a modern and responsive corporate business landing page designed to
-            showcase services, team members, and client testimonials. It provides a clean, professional
-            layout focused on business growth, consulting services, and lead generation.</p>
+          <div class="project-tags">
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+          </div>
+          <h3 class="project-title">Bizcell – Landing Page</h3>
+          <p class="project-desc">A modern, responsive corporate business landing page designed to showcase services, team members, and client testimonials with a clean, professional layout.</p>
           <div class="project-links">
-            <a href="https://github.com/waqasahmad422/Bizcell" target="_blank" class="project-link"><i class="fab fa-github"></i> Source
-              <i class="fas fa-arrow-right"></i></a>
-            <a href="https://apnabizcellclone.vercel.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i>
-              Demo <i class="fas fa-arrow-right"></i></a>
+            <a href="https://github.com/waqasahmad422/Bizcell" target="_blank" class="project-link"><i class="fab fa-github"></i> Source <i class="fas fa-arrow-right"></i></a>
+            <a href="https://apnabizcellclone.vercel.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Demo <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
 
-      
-
-      <div class="project-card reveal">
+      <!-- Card 3 -->
+      <div class="project-card reveal" data-aos="fade-up" data-aos-delay="200">
         <div class="project-thumb">
           <div class="project-thumb-placeholder" style="background:linear-gradient(135deg,#1a001a,#2d002d);">
-            <img src="./assets/images/project_img/elegencia.PNG" alt="">
+            <img src="./assets/images/project_img/elegencia.PNG" alt="Excusine Hotel">
           </div>
           <div class="project-overlay"></div>
         </div>
         <div class="project-body">
-          <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span
-              class="tag">JavaScript</span></div>
-          <h3 class="project-title">Excusine Hotel & Resort Website</h3>
-          <p class="project-desc">Excusine Hotel & Resort is a responsive hotel booking website that highlights luxury hotel
-            rooms, premium services, and guest experiences. It is offers a modern design with an easy-to-use interface for
-            seamless hotel reservations.
-          </p>
+          <div class="project-tags">
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+          </div>
+          <h3 class="project-title">Excusine Hotel & Resort</h3>
+          <p class="project-desc">A responsive hotel booking website highlighting luxury rooms, premium services, and guest experiences — featuring a modern design with seamless reservation flow.</p>
           <div class="project-links">
             <a href="https://github.com/waqasahmad422/Elegencia" target="_blank" class="project-link"><i class="fab fa-github"></i> Source <i class="fas fa-arrow-right"></i></a>
-            <a href="https://elegencia-phi.vercel.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Demo <i
-                class="fas fa-arrow-right"></i></a>
+            <a href="https://elegencia-phi.vercel.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Demo <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
 
+      <!-- Card 4 — NEW -->
+      <div class="project-card reveal" data-aos="fade-up" data-aos-delay="300">
+        <div class="project-thumb">
+          <div class="project-thumb-placeholder" style="background:linear-gradient(135deg,#0d1a2a,#0a2240);">
+            <img src="./assets/images/project_img/task-manager.PNG" alt="Task Manager App" onerror="this.style.display='none'">
+            <!-- Fallback icon shown when image is missing -->
+            <i class="fas fa-tasks" style="font-size:3.5rem;color:var(--orange);position:absolute;"></i>
+          </div>
+          <div class="project-overlay"></div>
+          <div class="project-badge">New</div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="tag">React</span><span class="tag">Tailwind</span>
+            <span class="tag">Node.js</span><span class="tag">MySQL</span>
+          </div>
+          <h3 class="project-title">TaskFlow – Task Manager</h3>
+          <p class="project-desc">A full-stack task management app with drag-and-drop boards, priority labels, due dates, and user authentication — built to boost daily productivity.</p>
+          <div class="project-links">
+            <a href="https://github.com/waqasahmad422" target="_blank" class="project-link"><i class="fab fa-github"></i> Source <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="project-link project-link--soon"><i class="fas fa-clock"></i> Coming Soon</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ── -->
+  <section id="testimonials">
+    <div class="section-label reveal">Kind Words</div>
+    <h2 class="section-title reveal">What People <span>Say</span></h2>
+
+    <div class="testimonials-slider-wrap">
+      <div class="testimonials-track" id="testimonialsTrack">
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Waqas delivered our landing page ahead of schedule, and the quality blew us away. Every pixel was intentional, and he was incredibly easy to work with throughout the process."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AK</div>
+            <div class="testimonial-meta">
+              <h4>Ahmed Khan</h4>
+              <span>Founder, TechStartup PK</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"I hired Waqas to redesign our company website and I couldn't be happier. He understood our brand vision immediately and translated it into a stunning, responsive experience."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:linear-gradient(135deg,#6c3d91,#a855f7)">SN</div>
+            <div class="testimonial-meta">
+              <h4>Sara Niazi</h4>
+              <span>Marketing Manager, Nexova</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+          </div>
+          <p class="testimonial-text">"Waqas is one of those rare developers who truly cares about user experience. The React app he built for our team is fast, clean, and our users love it. Highly recommended."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:linear-gradient(135deg,#0f5132,#198754)">UR</div>
+            <div class="testimonial-meta">
+              <h4>Usman Raza</h4>
+              <span>CTO, DevForge Labs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Working with Waqas felt like collaborating with a senior developer despite his young career. His attention to code structure and performance made our project a joy to maintain."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:linear-gradient(135deg,#7a1c1c,#dc2626)">FM</div>
+            <div class="testimonial-meta">
+              <h4>Fatima Malik</h4>
+              <span>Project Lead, PixelCraft Agency</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Slider Controls -->
+      <div class="slider-controls">
+        <button class="slider-btn" id="prevBtn" aria-label="Previous testimonial">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="slider-dots" id="sliderDots"></div>
+        <button class="slider-btn" id="nextBtn" aria-label="Next testimonial">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
     </div>
   </section>
 
@@ -308,8 +399,7 @@
     <div class="contact-grid">
       <div class="contact-info reveal">
         <h3>Open for opportunities</h3>
-        <p>Whether it's a freelance project, full-time role, or just a great conversation about code — my inbox is
-          always open. Let's build something amazing together.</p>
+        <p>Whether it's a freelance project, full-time role, or just a great conversation about code — my inbox is always open. Let's build something amazing together.</p>
 
         <div class="contact-items">
           <div class="contact-item">
@@ -376,10 +466,11 @@
 
   <!-- ── FOOTER ── -->
   <footer>
-    <p>&copy; 2026 <span>Waqas Ahmad Shah</span> All rights reserved ·</p>
+    <p>&copy; 2026 <span>Waqas Ahmad Shah</span> · All rights reserved</p>
   </footer>
 
-  <!-- ─────────────── SCRIPTS ─────────────── -->
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="./assets/js/app.js"></script>
 </body>
 
