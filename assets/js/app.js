@@ -9,7 +9,7 @@ AOS.init({ duration: 800, once: true, offset: 80 });
 new Typed("#typed-text", {
   strings: [
     "Frontend Developer",
-    "UI/UX Enthusiast",
+    "UI/UX Desinger",
     "React Developer",
     "Web Developer",
   ],

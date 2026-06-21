@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(121, 8, 8);
+        }
+        .container{
+            width: 400px;
+            background-color: rgb(7, 7, 59);
+            padding: 30px;
+            border-radius: 20px;
+        }
+        .container input{
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+        }
+        .container button{
+            padding: 10px;
+            border-radius: 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+        }
+        .container button:hover{
+            scale: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" name="text" id="text" placeholder="Something Type....">
+        <button onclick="speechSynthesis.speak(new SpeechSynthesisUtterance(text.value))">speak</button>
+    </div>
+</body>
+
+</html>
